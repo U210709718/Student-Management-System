@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> CRUD Student Managment System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scriptCourse.js" defer></script>
+    <script src="scriptStudent.js" defer></script>
+</head>
+<body>
+    <div class="head">
+        <!-- head part -->
+        <img src="https://media.tenor.com/NBQgGNEZv0cAAAAj/bow.gif" style="width:75px;height:70px;"> 
+        <h2>crud</h2>
+        <p>Student Management System</p>   
+        
+    </div>
+    <div class="crud">
+        <!-- start of courses section -->
+        <div class="courses">
+            <h3> Add a Course :</h3>
+            <!-- inputs of courses -->
+
+            <div class="inputs">
+                <select name= "coursename" id="courseNameIncourses" >
+                    <option value="" selected disabled>Choose a course</option>
+                    <!-- Course options will be filled dynamically by JavaScript -->
+                </select>
+                <div class="courseInfo">
+                    <input placeholder="Instructor Name" type="text" id="instructorName">
+                    <select name="grades" id="geadeSystem">
+                        <option value="10">10 Grading System</option>
+                        <option value="7">7 Grading System</option>
+                    </select>
+                </div>
+
+                <button id="submitcourse">Add</button>
+            </div>
+
+            <!-- outputs of courses -->
+            <div class="outputs">
+                <div class="searchCoursesBlock">
+                    <!--  onkeyup="searchCourseData(this.value) means any value written to keyboard will be passed to function ! -->
+                    <input  onkeyup="searchCourseData(this.value)"  type="text" id="searchCourse" placeholder="Search">
+                    <div class="btnSearchCourse">
+                        <button id="searchCourseName" onclick="getSearchMoodC(this.id, 'coursename')">Search By Course Name</button>
+                        <button id="searchCoursegrading" onclick="getSearchMoodC(this.id, 'grading')">Search By Grading system</button>
+                    </div>
+                    <div id="deleteAllCourses">
+                        <!-- add button to here by javascript ! -->
+                    </div>
+                    <table>
+                        <tr> 
+                            <th>id</th>
+                            <th>Course name</th>
+                            <th>Instructor name</th>
+                            <th>Grading system</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                        <!-- Magical data  -->
+                        <tbody id="tCbody"> 
+                            
+                        </tbody>
+                    </table>
+    
+                </div>
+    
+            </div>
+    
+        </div> 
+        <!-- end of courses section -->
+    
+        <!-- start of students section -->
+        <div class="students">
+            <h3> Add a Student into a course:</h3>
+            <!-- inputs of students -->
+            <div class="inputs">
+                <input placeholder="Student Name" type="text" id="studentname">
+                <select name= "coursename" id="courseInStudents">
+                    <!-- Course options will be filled dynamically by JavaScript -->
+                </select>
+                <div class="grades">
+                    <!-- onkeyup refer to when user write anything run this function getTotal() -->
+                    <input onkeyup="getTotal()" placeholder="Midterm" type="number" id="midterm">
+                    <input onkeyup="getTotal()" placeholder="Final" type="number" id="final">
+                    <small id="total"></small>
+                </div>
+                <button id="submitstudent">Add</button>
+            </div>
+            <!-- outputs of students -->
+            <div class="outputs">
+                <div class="searchStudentBlock">
+                    <!-- any value written to keyboard will be passed to function ! -->
+                    <input  onkeyup="searchStudentData(this.value)"  type="text" id="searchStudent" placeholder="Search">
+                    <div class="btnSearchStudent">
+                        <button  onclick=" getSearchMoodS(this.id)" id="searchStudentName">Search By Name</button>
+                        <button onclick=" getSearchMoodS(this.id)" id="searchCourseNameS" >Search By Course</button>
+                        <button  onclick=" getSearchMoodS(this.id)" id="searchPassOrFail">Search for student status</button>
+                    </div>
+                    <div id="deleteAllStudents">
+                        <!-- add button to here by javascript ! -->
+                    </div>
+                    <table>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>course</th>
+                            <th>midterm</th>
+                            <th>final</th>
+                            <th>total</th>
+                            <th>GPA</th>
+                            <!-- status means faild or passed ! -->
+                            <th>Student status</th> 
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+
+                        <!-- Magical data  -->
+                        <tbody id="tSbody"> 
+                        </tbody>
+                    </table>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+        <!-- end of students section -->
+
+    </div>
+    
+    
+</body>
+</html>

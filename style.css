@@ -1,0 +1,135 @@
+*{
+    /*make everything back to its original state without browswer default padding and margin*/
+    margin: 0;
+    padding: 0;
+}
+/*Body styling*/
+body{
+    background: #222222;
+    color: #000000;
+    font-family: system-ui;
+}
+
+/*Style the project ,it has the whole project */
+.crud{
+    width: 80%;
+    margin: auto; /*center it */
+}
+.head{
+    text-align: center;
+    color: #e39cb2;
+    text-transform: uppercase;
+    margin: 15px 0;
+
+}
+.courses{
+    margin: 10px 0px;
+    padding: 26px 40px;
+    border: #000000 solid 2px;
+    border-radius: 4px;
+    background-color: #fac3d5;
+}
+.students{
+    margin: 10px 0;
+    padding: 26px 40px;
+    border: #000000 solid 2px;
+    border-radius: 4px;
+    background-color:#fac3d5;
+}
+
+/*Style all inputs*/
+input{
+    width:100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: #ffffff;
+    margin: 4px 0px;
+    border-radius: 4px;
+    padding: 4px;
+    color: #000000;
+
+
+}
+input:focus{
+    background: #f89eba;
+    transform: scale(1.1);
+}
+
+/*Style all buttons*/
+button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background:#a39aa0 ;
+    color: #000000;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+button:hover{
+    background:#6a6569;
+    letter-spacing: 1px;
+}
+
+/*Style all tables*/
+table{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+}
+table th{
+    text-transform: uppercase;
+}
+th, td {
+    padding: 5px;
+}
+
+
+/*Courses*/
+.courseInfo *{
+    width:40%;
+}
+
+.btnSearchCourse{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearchCourse button{
+    width: 45%;
+}
+
+#deleteAllCourses{
+    margin: 20px 0;
+
+}
+
+
+/*Students*/
+.grades input{
+    width:20%;
+}
+#total{
+    background: #d12a1e;
+    padding: 5px 2px;
+    border-radius: 4px;
+}
+#total::before{
+    content: 'Total';
+}
+
+
+.btnSearchStudent{
+    display: flex;
+    justify-content: space-between;
+}
+.btnSearchStudent button{
+    width: 45%;
+
+    
+}
+
+#deleteAllStudents{
+    margin: 20px 0;
+    
+}
